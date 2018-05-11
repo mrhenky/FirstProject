@@ -11,7 +11,7 @@ ${URL} =  http://www.robotframeworktutorial.com/front-office/
 
 *** Test Cases ***
 Display "FrontOffice" page
-    [Tags]  bus
+    [Tags]  bus  lolo
     Open target web
 
 Access Target web page
