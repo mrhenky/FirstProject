@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180319 18:45:35.138" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite id="s1" name="Results &amp; FrontOffice">
+<suite source="C:\development\FirstProject\results" id="s1-s1" name="Results">
+<status status="PASS" endtime="20180319 18:45:35.168" starttime="20180319 18:45:35.168"></status>
+</suite>
+<suite source="C:\development\FirstProject\Tests\FrontOffice.robot" id="s1-s2" name="FrontOffice">
+<kw type="setup" name="Begin Web Test" library="CommonWeb">
+<doc>Opening browser ff</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180319 18:45:35.358" level="INFO">Opening browser 'ff' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180319 18:45:40.562" starttime="20180319 18:45:35.348"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180319 18:45:40.882" starttime="20180319 18:45:40.562"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:40.882" starttime="20180319 18:45:35.348"></status>
+</kw>
+<test id="s1-s2-t1" name="Display &quot;FrontOffice&quot; page">
+<kw name="Open target web" library="FrontOfficeApp">
+<tags>
+<tag>Test 1</tag>
+</tags>
+<doc>Open web page</doc>
+<kw name="FrontOffice page" library="LandingPage">
+<doc>skuska spravnosti</doc>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20180319 18:45:40.882" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office/'</msg>
+<status status="PASS" endtime="20180319 18:45:42.811" starttime="20180319 18:45:40.882"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180319 18:45:45.812" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180319 18:45:45.812" starttime="20180319 18:45:42.811"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:45.812" starttime="20180319 18:45:40.882"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:45.812" starttime="20180319 18:45:40.882"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:45.812" critical="yes" starttime="20180319 18:45:40.882"></status>
+</test>
+<test id="s1-s2-t2" name="Access Target web page">
+<kw name="Should be able to access &quot;Team&quot; page" library="FrontOfficeApp">
+<tags>
+<tag>Test 2</tag>
+</tags>
+<doc>Check that we are able access target page</doc>
+<kw name="Reach &quot;Final&quot; page" library="TopNav">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>RobotFrameworkTutorial.com Test Client</arg>
+</arguments>
+<status status="PASS" endtime="20180319 18:45:45.825" starttime="20180319 18:45:45.815"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>page reached</arg>
+</arguments>
+<msg timestamp="20180319 18:45:45.826" level="INFO">page reached</msg>
+<status status="PASS" endtime="20180319 18:45:45.826" starttime="20180319 18:45:45.826"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/nav/div/div[2]/ul/li[5]/a</arg>
+</arguments>
+<msg timestamp="20180319 18:45:45.826" level="INFO">Clicking element 'xpath=/html/body/nav/div/div[2]/ul/li[5]/a'.</msg>
+<status status="PASS" endtime="20180319 18:45:46.060" starttime="20180319 18:45:45.826"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180319 18:45:49.063" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180319 18:45:49.063" starttime="20180319 18:45:46.061"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:49.063" starttime="20180319 18:45:45.815"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:49.063" starttime="20180319 18:45:45.814"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:49.063" critical="yes" starttime="20180319 18:45:45.814"></status>
+</test>
+<test id="s1-s2-t3" name="Target web page is valid">
+<kw name="&quot;Team&quot; page should match requirements" library="FrontOfficeApp">
+<tags>
+<tag>Test 3</tag>
+</tags>
+<doc>Target page check</doc>
+<kw name="Check that you are on page" library="Team">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Our Amazing Team</arg>
+</arguments>
+<status status="PASS" endtime="20180319 18:45:49.093" starttime="20180319 18:45:49.063"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>page reached, context checked</arg>
+</arguments>
+<msg timestamp="20180319 18:45:49.093" level="INFO">page reached, context checked</msg>
+<status status="PASS" endtime="20180319 18:45:49.103" starttime="20180319 18:45:49.093"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180319 18:45:52.103" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180319 18:45:52.103" starttime="20180319 18:45:49.103"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:52.103" starttime="20180319 18:45:49.063"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:52.103" starttime="20180319 18:45:49.063"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:52.103" critical="yes" starttime="20180319 18:45:49.063"></status>
+</test>
+<kw type="teardown" name="End Web Test" library="CommonWeb">
+<doc>Test is ended</doc>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180319 18:45:52.383" starttime="20180319 18:45:52.103"></status>
+</kw>
+<status status="PASS" endtime="20180319 18:45:52.383" starttime="20180319 18:45:52.103"></status>
+</kw>
+<doc>Test of FrontOffice page</doc>
+<status status="PASS" endtime="20180319 18:45:52.383" starttime="20180319 18:45:35.178"></status>
+</suite>
+<status status="PASS" endtime="20180319 18:45:52.393" starttime="20180319 18:45:35.138"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Results &amp; FrontOffice" pass="3">Results &amp; FrontOffice</stat>
+<stat fail="0" id="s1-s1" name="Results" pass="0">Results &amp; FrontOffice.Results</stat>
+<stat fail="0" id="s1-s2" name="FrontOffice" pass="3">Results &amp; FrontOffice.FrontOffice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
