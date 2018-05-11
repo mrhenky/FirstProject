@@ -15,7 +15,7 @@ Display "FrontOffice" page
     Open target web
 
 Access Target web page
-    [Tags]  auto
+    [Tags]  auto kkk
     Should be able to access "Team" page
 
 Target web page is valid
