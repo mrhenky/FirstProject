@@ -6,7 +6,7 @@ Suite Setup  Begin Web Test
 Suite Teardown  End Web Test
 
 *** Variables ***
-${BROWSER} =  ie
+${BROWSER} =  ff
 ${URL} =  http://www.robotframeworktutorial.com/front-office/
 
 *** Test Cases ***
